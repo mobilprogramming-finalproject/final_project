@@ -13,16 +13,39 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Sigin'),
+        title: Text('Sign in'),
       ),
       body: Form(
+
         // todo implement key
           key: _formKey,
           child: Column(
             children: <Widget>[
+              SizedBox(
+                height: 100,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset("images/logo.png", width: 120, height: 120,),
+                ],
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12),
+              child:Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(15)
+                ),
+                child:Padding(padding: EdgeInsets.only(left: 10),
+
               // todo implement fields
-              TextFormField(
+                child:TextFormField(
                 // ignore: missing_return
                 validator: (input) {
                   if (input.isEmpty) {
@@ -31,24 +54,48 @@ class _LoginPageState extends State<LoginPage> {
                   }
                 },
                 onSaved: (input) => _email = input,
-                decoration: InputDecoration(labelText: 'Email'),
-              ),
-              TextFormField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: "Email",
+                  icon: Icon(Icons.email)
+                  ),
+                 ),
+                 ),
+                ),
+               ),
+              Padding(
+                padding: const EdgeInsets.all(12),
+                child:Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15)
+                ),
+                  child:Padding(padding: EdgeInsets.only(left: 10),
+                   child:TextFormField(
                 // ignore: missing_return
-                validator: (input) {
-                  if (input.length < 6) {
+                     validator: (input) {
+                     if (input.length < 6) {
                     return 'Lütfen 6 karakterden büyük şifre girişi yapınız';
                     // ignore: missing_return
-                  }
-                },
-                onSaved: (input) => _password = input,
-                decoration: InputDecoration(labelText: 'Şifre'),
+                    }
+                    },
+                    onSaved: (input) => _password = input,
+                    decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Password",
+                    icon: Icon(Icons.lock)
+                ),
                 obscureText: true,
               ),
-              RaisedButton(
+                  )
+                  ,),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12),
+              child: RaisedButton(
                 onPressed: () => signIn(), // () => signIn()
                 child: Text('Sign in'),
-              )
+              ),)
             ],
           )),
     );

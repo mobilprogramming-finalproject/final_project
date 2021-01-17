@@ -1,4 +1,5 @@
-
+Firebase ve flutter kullanılarak geliştirilmiş bir sipariş uygulamasıdır. Giriş yapma ve kayıt olma panelleri,ürün ve restoran arama işlemleri,
+kategori ve ürün listeleme işlemleri yapılabilmektedir.
 
 <h2>Giriş Ekranı
   

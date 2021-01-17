@@ -1,16 +1,21 @@
-# final_project
 
-A new Flutter application.
 
-## Getting Started
+<h2>Giriş Ekranı
+  
+  
+  ![gg](https://user-images.githubusercontent.com/62529090/104855896-71eb3e80-5920-11eb-9443-1c84893d5116.JPG)
+  
+  
+<h2>Anasayfa
+  
+  
+  ![ana](https://user-images.githubusercontent.com/62529090/104855926-98a97500-5920-11eb-900d-f5d5a0ddcf95.JPG)
+  
+  
+<h2>Kategori İçerikleri
+  
+  ![ttlı](https://user-images.githubusercontent.com/62529090/104855851-45372700-5920-11eb-9ff7-2770c9c116bd.JPG)
+  
+  ![kk](https://user-images.githubusercontent.com/62529090/104855953-c393c900-5920-11eb-8cfb-071f254b9409.JPG)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

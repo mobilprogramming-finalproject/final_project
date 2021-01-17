@@ -51,7 +51,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
-                        "images/logo.png",
+                        "images/Logo.jpg"
+                        "",
                         width: 100,
                         height: 100,
                       ),
@@ -72,7 +73,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           controller: authProvider.name,
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: "Username",
+                              hintText: "Kullanıcı Adı",
                               icon: Icon(Icons.person)),
                         ),
                       ),
@@ -108,7 +109,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           controller: authProvider.password,
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: "Password",
+                              hintText: "Şifre",
                               icon: Icon(Icons.lock)),
                         ),
                       ),
@@ -133,7 +134,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                            color: red,
+                            color: Colors.greenAccent,
                             border: Border.all(color: grey),
                             borderRadius: BorderRadius.circular(15)),
                         child: Padding(
@@ -143,7 +144,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             children: <Widget>[
                               CustomText(
                                 text: "Kayıt ol",
-                                color: white,
+
                                 size: 22,
                               )
                             ],
@@ -152,20 +153,31 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      changeScreen(context, LoginScreen());
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CustomText(
-                          text: "Giriş yap",
-                          size: 20,
+                  Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: GestureDetector(
+                        onTap: () {
+                          changeScreen(context, LoginScreen());
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.greenAccent,
+                              border: Border.all(color: grey),
+                              borderRadius: BorderRadius.circular(15)),
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 10, bottom: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                CustomText(
+                                  text: "Giriş yap",
+                                  size: 20,
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
-                  ),
+                      ))
                 ],
               ),
             ),

@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       key: _key,
-      backgroundColor: white,
+      backgroundColor: Colors.white,
       body: authProvider.status == Status.Authenticating? Loading() : SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset("images/logo.png", width: 120, height: 120,),
+                Image.asset("images/Logo.jpg", width: 120, height: 120,),
               ],
             ),
 
@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: authProvider.password,
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Password",
+                        hintText: "Şifre",
                         icon: Icon(Icons.lock)
                     ),
                   ),),
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTap: ()async{
                   if(!await authProvider.signIn()){
                     _key.currentState.showSnackBar(
-                      SnackBar(content: Text("Login failed!"))
+                      SnackBar(content: Text("Giriş başarısız!!"))
                     );
                     return;
                   }
@@ -101,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: red,
+                    color: Colors.greenAccent,
                       border: Border.all(color: grey),
                       borderRadius: BorderRadius.circular(15)
                   ),
@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        CustomText(text: "Login", color: white, size: 22,)
+                        CustomText(text: "Giriş yap", size: 22,)
                       ],
                     ),),
                 ),
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
                 child: Container(
                   decoration: BoxDecoration(
-                      color: red,
+                      color: Colors.greenAccent,
                       border: Border.all(color: grey),
                       borderRadius: BorderRadius.circular(15)
                   ),
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CustomText(text: "Register here", size: 20,),
+                  CustomText(text: "Kayıt ol", size: 20,),
                 ],
               ),
             ),),),),
